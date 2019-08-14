@@ -7,7 +7,6 @@ import com.better517na.fangyuan.business.IUserDataBusiness;
 import com.better517na.fangyuan.dao.IUserDataDao;
 import com.better517na.fangyuan.model.bo.UserDataBo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component

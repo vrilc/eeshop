@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.better517na.fangyuan.dao.IUserDataDao;
-import com.better517na.fangyuan.exception.ValidIdException;
 import com.better517na.fangyuan.model.Response;
 import com.better517na.fangyuan.model.bo.UserDataBo;
 import com.better517na.fangyuan.service.IUserDataService;
