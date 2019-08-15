@@ -1,0 +1,31 @@
+server:
+  port: 11403
+
+eureka:
+  client:
+    # registerWithEureka: false
+    # fetchRegistry: false
+    service-url:
+      defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/
+    healthcheck:
+      enabled: true
+    
+
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
+    
+    
+  instance:
+    hostname: eurekaserver3
+    prefer-ip-address: false
+    lease-renewal-interval-in-seconds: 15
+    lease-expiration-duration-in-seconds: 30
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+ 
+
+spring:
+  application:
+    name: eureka
+#nohup java -jar eureka.jar --spring.profiles.active=peer1 > peer1.out &
