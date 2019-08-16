@@ -6,7 +6,7 @@ eureka:
     # registerWithEureka: false
     # fetchRegistry: false
     service-url:
-      defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/
+      defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/,http://eurekaserver3:11403/eureka/
     healthcheck:
       enabled: true
     

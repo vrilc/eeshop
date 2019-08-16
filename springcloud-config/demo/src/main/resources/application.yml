@@ -1,0 +1,31 @@
+spring:
+    application:
+        name: springcloud-config-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/vrilc/eeshop-config
+                    search-paths:
+                    - configs
+                    - configs/test
+            label: master
+server:
+    port: 11400
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/,http://eurekaserver3:11403/eureka/
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 15
+    lease-expiration-duration-in-seconds: 30
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+
+#  spring.cloud.config.server.git.uri = https://github.com/
+#  spring.cloud.config.server.git.search-paths = /
+#  spring.cloud.config.server.git.username = 
+#  spring.cloud.config.server.git.password = 
