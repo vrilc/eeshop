@@ -3,7 +3,7 @@ server:
 
 eureka:
   client:
-    # registerWithEureka: false
+    # registerWithEureka: falseqq
     # fetchRegistry: false
     service-url:
       defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/,http://eurekaserver3:11403/eureka/
@@ -17,7 +17,7 @@ eureka:
     
   instance:
     hostname: eurekaserver1
-    prefer-ip-address: false
+    prefer-ip-address: false                                                                                                                                                                                                        
     lease-renewal-interval-in-seconds: 15
     lease-expiration-duration-in-seconds: 30
     instance-id: ${spring.cloud.client.ip-address}:${server.port}

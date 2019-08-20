@@ -7,8 +7,9 @@ spring:
                 git:
                     uri: https://github.com/vrilc/eeshop-config
                     search-paths:
-                    - configs
-                    - configs/test
+                    - test
+                    - dev
+                    - prods
             label: master
 server:
     port: 11400
