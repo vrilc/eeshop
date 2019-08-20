@@ -1,0 +1,18 @@
+server:
+    port: 11000
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      profile: dev
+      label: master
+      # 需要的配置文件，多个用逗号隔开
+      name: eureka-common,config-dev
+      discovery:
+        service-id: springcloud-config-server
+        enabled: true
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://eurekaserver1:11401/eureka/,http://eurekaserver2:11402/eureka/,http://eurekaserver3:11403/eureka/
